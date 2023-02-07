@@ -18,9 +18,9 @@ abstract class RoundsTest {
     @Test
     void alwaysRoundsUp() {
         var five = "🔵🔵🔵🔵🔵⚪⚪⚪⚪⚪";
-        assertEquals(five, rounds.getRounds(0.5));
-        assertEquals(five, rounds.getRounds(0.41));
-        assertEquals(five, rounds.getRounds(0.49));
+        assertEquals(five, rounds.getRounds(0.44));
+        assertEquals(five, rounds.getRounds(0.45));
+        assertEquals(five, rounds.getRounds(0.46));
     }
 
     @Test

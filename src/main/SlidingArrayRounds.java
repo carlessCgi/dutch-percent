@@ -6,11 +6,10 @@ public class SlidingArrayRounds implements RoundsInterface {
     public String getRounds(double score) {
         int normalised = scoreToInt(score);
         return DOTS.substring(10 - normalised, 20 - normalised);
-        // Welcome to the fun of string encoding!
     }
 
     private int scoreToInt(double score) {
-        assert score >= 0.0 && score <= 1.0 : "score outside the range 0-1";
+        assert score >= 0.0 && score <= 1.0 : "score should be 0.0-1.0";
         return (int)Math.ceil(score * 10);
     }
 }

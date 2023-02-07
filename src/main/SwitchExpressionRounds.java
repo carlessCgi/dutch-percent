@@ -1,7 +1,7 @@
 public class SwitchExpressionRounds implements RoundsInterface {
     @Override
     public String getRounds(double score) {
-        return switch ((int) Math.ceil(score * 10)) {
+        return switch (scoreToRank(score)) {
             case 0  -> "⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪";
             case 1  -> "🔵⚪⚪⚪⚪⚪⚪⚪⚪⚪";
             case 2  -> "🔵🔵⚪⚪⚪⚪⚪⚪⚪⚪";
@@ -14,5 +14,9 @@ public class SwitchExpressionRounds implements RoundsInterface {
             case 9  -> "🔵🔵🔵🔵🔵🔵🔵🔵🔵⚪";
             default -> "🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵";
         };
+    }
+
+    private int scoreToRank(double score) {
+        return (int)Math.ceil(score * 10);
     }
 }
