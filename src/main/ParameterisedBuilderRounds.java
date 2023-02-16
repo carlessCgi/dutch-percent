@@ -6,16 +6,16 @@ public class ParameterisedBuilderRounds implements RoundsInterface {
 
   @Override
   public String getRounds(double score) {
-    var rank = scoreToRank(score, MAX_RANK);
-    return rankToRounds(rank, MAX_RANK, SCORE_DOT, PAD_DOT);
+    var rank = scoreToRank(score);
+    return rankToRounds(rank);
   }
 
-  private int scoreToRank(double score, int max) {
-    if (score < 0.0 || score > 1.0) return max;
-    return (int) Math.ceil(score * max);
+  private int scoreToRank(double score) {
+    if (score < 0.0 || score > 1.0) return MAX_RANK;
+    return (int) Math.ceil(score * MAX_RANK);
   }
 
-  private String rankToRounds(int rank, int max, String dot, String pad) {
-    return dot.repeat(rank) + pad.repeat(max - rank);
+  private String rankToRounds(int rank) {
+    return SCORE_DOT.repeat(rank) + PAD_DOT.repeat(MAX_RANK - rank);
   }
 }
