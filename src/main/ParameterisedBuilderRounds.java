@@ -16,6 +16,6 @@ public class ParameterisedBuilderRounds implements RoundsInterface {
   }
 
   private String rankToRounds(int rank) {
-    return SCORE_DOT.repeat(rank) + PAD_DOT.repeat(MAX_RANK - rank);
+      return SCORE_DOT.repeat(rank) + PAD_DOT.repeat(MAX_RANK - rank);
   }
 }

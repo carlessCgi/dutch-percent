@@ -16,7 +16,7 @@ public class ArrayRounds implements RoundsInterface {
 
   @Override
   public String getRounds(double score) {
-    return DOTS[scoreToRank(score)];
+      return DOTS[scoreToRank(score)];
   }
 
   private int scoreToRank(double score) {
