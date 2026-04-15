@@ -5,14 +5,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 abstract class RoundsTest {
   RoundsInterface rounds;
 
+  private String allBlue = "🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵";
+  private String allWhite = "⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪";
+
   @Test
   void zeroIsAllWhite() {
-    assertEquals("⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪", rounds.getRounds(0.0));
+    assertEquals(allWhite, rounds.getRounds(0.0));
   }
 
   @Test
   void oneIsAllBlue() {
-    assertEquals("🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵", rounds.getRounds(1.0));
+    assertEquals(allBlue, rounds.getRounds(1.0));
   }
 
   @Test
@@ -24,7 +27,7 @@ abstract class RoundsTest {
   }
 
   @Test
-  void boundariesAroundScoreOne() {
+  void checkBoundariesAroundOne() {
     var one = "🔵⚪⚪⚪⚪⚪⚪⚪⚪⚪";
     var two = "🔵🔵⚪⚪⚪⚪⚪⚪⚪⚪";
     assertEquals(one, rounds.getRounds(0.0000001));
@@ -35,14 +38,14 @@ abstract class RoundsTest {
 
   @Test
   void anyNegativeIsAllBlue() {
-    assertEquals("🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵", rounds.getRounds(-0.00001));
-    assertEquals("🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵", rounds.getRounds(-1.0));
-    assertEquals("🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵", rounds.getRounds(-100.0));
+    assertEquals(allBlue, rounds.getRounds(-0.00001));
+    assertEquals(allBlue, rounds.getRounds(-1.0));
+    assertEquals(allBlue, rounds.getRounds(-100.0));
   }
 
   @Test
   void greaterThanOneIsAllBlue() {
-    assertEquals("🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵", rounds.getRounds(1.1));
-    assertEquals("🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵", rounds.getRounds(100.0));
+    assertEquals(allBlue, rounds.getRounds(1.1));
+    assertEquals(allBlue, rounds.getRounds(100.0));
   }
 }
