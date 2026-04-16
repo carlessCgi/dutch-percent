@@ -10,7 +10,7 @@ public class SlidingWindowRounds implements RoundsInterface {
   }
 
   private int scoreToRank(double score) {
-    if (score < 0.0 || score > 1.0) return MAX_RANK;
+    if (score < 0.0 || score >= 1.0) return MAX_RANK;
     return (int) Math.ceil(score * MAX_RANK);
   }
 
