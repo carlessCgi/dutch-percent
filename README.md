@@ -21,10 +21,10 @@ This all starts with [this implementation](src/main/OriginalRounds.java) which i
 ## What's the point of this?
 
 1. I was interested - turns out others were too.
-2. "To see the world in a grain of sand" - think and talk about what you find good and bad about the things you see every day (code).
+2. "To see the world in a grain of sand" - think and talk about what we see and like
 3. TMTOWTDI - understanding why things are as they are and how they can be different
 4. An exercise in collaborative peer review - how do we approach this stuff?
-4. Fiddling with code is way more interesting that Jira or Word documents
+4. Fiddling with code is way more interesting what I was meant to do
 
 ## DBAD
 * Be kind
