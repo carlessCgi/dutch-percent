@@ -5,8 +5,7 @@ public class SlidingWindowRounds implements RoundsInterface {
 
   @Override
   public String getRounds(double score) {
-    int rank = scoreToRank(score);
-    return rankToRounds(rank);
+    return rankToRounds(scoreToRank(score));
   }
 
   private int scoreToRank(double score) {

@@ -6,8 +6,7 @@ public class ParameterisedBuilderRounds implements RoundsInterface {
 
   @Override
   public String getRounds(double score) {
-    var rank = scoreToRank(score);
-    return rankToRounds(rank);
+    return rankToRounds(scoreToRank(score));
   }
 
   private int scoreToRank(double score) {
