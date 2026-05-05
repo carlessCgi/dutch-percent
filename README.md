@@ -14,7 +14,7 @@ The tweet kicked off various folk discussing how good/bad the code fragment was,
 
 So I thought it'd be interesting to rewrite that function in Java, then riff on it using different approaches to see what I and other folk think about the readability, correctness, robustness, etc.
 
-Also it provides a focus to look at interesting bugs and edge cases in the different implementations.
+It also provides a focus to look at interesting bugs and edge cases in the different implementations.
 
 This all starts with [this implementation](src/main/OriginalRounds.java) which is a copy-paste of the original function. Take a look, see what you think of it.
 
@@ -24,7 +24,7 @@ This all starts with [this implementation](src/main/OriginalRounds.java) which i
 2. "To see the world in a grain of sand" - think and talk about what we see and like
 3. TMTOWTDI - understanding why things are as they are and how they can be different
 4. An exercise in collaborative peer review - how do we approach this stuff?
-4. Fiddling with code is way more interesting what I was meant to do
+5. Fiddling with code is way more interesting what I was meant to do
 
 ## DBAD
 * Be kind
